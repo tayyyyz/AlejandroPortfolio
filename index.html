@@ -1,57 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
 </head>
 
 <body>
-    <header>
+    <header class="main-header">
         <h1>Front End Developer Student</h1>
-        <div class="profile_picture">
-          <img src="images/profile_picture.jpg" alt="profile picture" />
         <p>Welcome to my portfolio! I am a student learning front-end development, and this is a showcase of my work.</p>
+        <div class="profile_picture">
+            <img src="images/profile_picture.jpg" alt="Profile Picture" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-        <header class="nav">
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
 
-    		<div class="container-items">
-            <!-- Programming languages that I have experience -->
-            <!-- C++ -->
-			<div class="item">
-                <figure>
-					<img
-						src="images/C++.png"
-						alt="Programming Languages" />
-				</figure>
-            <!-- Python -->
-            <div class="item">
-                <figure>
-                    <img
-                        src="images/Python.png"
-                        alt="Programming Languages" />
-                </figure>
-            <!-- HTML -->
-            <div class="item">
-                <figure>
-                    <img
-                        src="images/HTML.png"
-                        alt="Programming Languages" />
-                </figure>
-            <!-- CSS -->
-            <div class="item">
-                <figure>
-                    <img
-                        src="images/CSS.png"
-                        alt="Programming Languages" />
-                </figure>
+    <main>
+        <section id="about">
+        <h2>About Me</h2>
+        <p> Hello! I'm Alejandro, a passionate Front End Developer student currently pursuing my Bachelor in Software Engineering in Berlin, Germany. My journey into the world of programming started two years ago when I discovered how exciting it is to turn ideas into interactive web experiences.
+        </p>
+        <p>
+        Over time, I've built a solid foundation in core languages like <strong>C++</strong> and <strong>Python</strong>, and I'm currently mastering web technologies such as <strong>HTML</strong> <strong> and CSS</strong>. My focus is on creating clean, responsive, and user-friendly interfaces. 
+        I enjoy learning modern tools and frameworks that help enhance web experiences.
+        </p>
+        <p>Beyond coding, I'm deeply interested in learning languages, exploring new cultures, and traveling. In my free time, you’ll find me playing football, hitting the gym, or working on personal coding projects.
+        </p>
+    <p>I'm currently looking for opportunities to contribute to real-world projects, collaborate with experienced developers, and continue growing as a front-end developer. Feel free to check out my work below or contact me. I'm always open to new challenges and collaborations!
+  </p>
+</section>
+        <section id="projects">
+    <h2>Projects & Skills</h2>
+
+    <!-- Contenedor del proyecto Golden Goats -->
+    <div class="project-container">
+        <div class="project">
+            <h3>Golden Goats</h3>
+            <img src="images/1.png" alt="Golden Goats screenshot 1" />
+            <p>Golden Goats is a C++ game where two characters compete to collect coins. When a player grabs a coin, a basic math question appears —if answered correctly, the coin counts; if not, it doesn't. The first player to collect 3 coins wins. The game was developed entirely in C++ using simple graphics.</p>
+            <div class="project-gallery">
+                <img src="images/1.png" alt="Screenshot 1" />
+                <img src="images/2.png" alt="Screenshot 2" />
+                <img src="images/3.png" alt="Screenshot 3" />
+                <img src="images/4.png" alt="Screenshot 4" />
+                <img src="images/5.png" alt="Screenshot 5" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor para lenguajes de programación -->
+    <div class="skills-container">
+        <div class="item">
+            <figure>
+                <img src="images/C++.png" alt="C++" />
+            </figure>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="images/Python.png" alt="Python" />
+            </figure>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="images/HTML.png" alt="HTML" />
+            </figure>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="images/CSS.png" alt="CSS" />
+            </figure>
+        </div>
+    </div>
+</section>
+
+
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me via email at: <a href="alejandroatmbrit@gmail.com">alejandroatmbrit@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alejandro Tay. All rights reserved.</p>
+    </footer>
 </body>
+</html>
