@@ -13,10 +13,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
-    color: #333;
-    background: linear-gradient(135deg, #f0f4f8, #ffffff);
+    color: #e0e4ce;
+    background: linear-gradient(135deg, #2d3839, #114d4d);
     padding: 20px;
     line-height: 1.6;
+    transition: all 1.5s ease;
+}
+
+#toggle {
+    display:none;
+}
+
+#label_toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #c7b836;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease;
 }
 
 img {
@@ -62,7 +78,7 @@ img {
 
 .main-header nav a {
     text-decoration: none;
-    color: #007BFF;
+    color: #c7b836;
     font-weight: bold;
     font-size: 1.1rem;
     position: relative;
@@ -74,17 +90,57 @@ img {
     display: block;
     width: 0;
     height: 3px;
-    background: #007BFF;
+    background: #c7b836;
     transition: width 0.3s;
     margin: auto;
 }
 
 .main-header nav a:hover {
-    color: #0056b3;
+    color: #c7b836;
 }
 
 .main-header nav a:hover::after {
     width: 100%;
+}
+
+.github-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.github-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c7b836;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.github-link a:hover {
+    background-color: #444c56;
+}
+
+.about-btns {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about-btns a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c7b836;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-btns a:hover {
+    background-color: #444c56;
 }
 
 /* Sections */
@@ -96,7 +152,7 @@ section {
 section h2 {
     margin-bottom: 20px;
     font-size: 2em;
-    border-bottom: 3px solid #007BFF;
+    border-bottom: 3px solid #c7b836;
     display: inline-block;
 }
 
@@ -112,7 +168,7 @@ section#about p {
     margin: 0 auto 20px auto;
     line-height: 1.8;
     font-size: 1.1rem;
-    text-align: justify;
+    text-align:center;
 }
 
 
@@ -122,7 +178,7 @@ section#about p {
 }
 
 .project {
-    background: #fff;
+    background: #6e9987;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 25px;
@@ -140,7 +196,7 @@ section#about p {
 .project h3 {
     font-size: 1.7rem;
     margin-bottom: 15px;
-    color: #007BFF;
+    color: #c7b836;
     text-align: center;
 }
 
@@ -149,8 +205,7 @@ section#about p {
     margin: 0 auto 25px auto;
     font-size: 1.1rem;
     line-height: 1.6;
-    text-align: justify;
-    color: #333;
+    color: #27191c;
 }
 
 .project-gallery {
@@ -206,6 +261,63 @@ section#about p {
     transform: scale(1.1);
 }
 
+.contact p{
+    font-size: 3.5rem; 
+    font-weight: bold;
+    color: #c7b836;
+    text-align: center;
+    animation: pulse 2s infinite ease-in-out;
+    margin-top: 20px;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px 15px;
+    border: 2px solid #c7b836;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #27191c;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #c7b836;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #444c56;
+}
 
 /* Footer */
 footer {
@@ -213,7 +325,7 @@ footer {
     padding: 20px;
     text-align: center;
     font-size: 0.9rem;
-    color: #666;
+    color: #6e9987;
     border-top: 1px solid #ddd;
     animation: fadeIn 2s ease;
 }
@@ -228,3 +340,21 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+.typing-cursor::after {
+  content: '|';               /* El cursor */
+  animation: blinkCursor 1s step-start infinite;
+  color: #c7b836;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+@keyframes blinkCursor {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
